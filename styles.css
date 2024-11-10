@@ -1,0 +1,282 @@
+:root {
+    --primary-color1: #ff7866; 
+    --primary-color2: #fc6b62;
+    --primary-color3: #fcdacc;
+    --primary-color4: #30717a ;
+    --primary-color5: #FF8880 ;
+    --primary-color6: #44d2bd;
+    --primary-color7: #0b9686 ;
+}
+
+/* Style for the skip-link class */
+.skip-link {
+    position: absolute;
+    top: -40px; /* Hide off-screen */
+    left: 0;
+    background: brown;  /* Background color */
+    color: #fff;        /* Text color */
+    padding: 8px;
+    z-index: 1100;  /* Ensure it is above other content */
+    text-decoration: none; /* Remove underline */
+}
+
+.skip-link:focus {
+    top: 0; /* Bring into view when focused */
+}
+
+.header-backsplash-home {
+    background: linear-gradient(to bottom, var(--primary-color2), var(--primary-color3)); /* Gradient colors, in case the image fails to display*/
+    background-image: url("images/tropical-art.jpg"); 
+    background-size: cover; /* Ensure the image covers the entire header */
+    background-position: bottom; 
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding: 130px; /* Add some padding to the header */
+}
+
+.header-backsplash-places {
+    background: linear-gradient(to bottom, var(--primary-color2), var(--primary-color3)); /* Gradient colors, in case the image fails to display*/
+    background-image: url("images/beach-resort-items-blue-background.jpg"); 
+    background-size: cover; /* Ensure the image covers the entire header */
+    background-position: bottom; 
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding: 130px; /* Add some padding to the header */
+}
+
+.header-backsplash-food {
+    background: linear-gradient(to bottom, var(--primary-color2), var(--primary-color3)); /* Gradient colors, in case the image fails to display*/
+    background-image: url("images/food/boodle.png"); /* Path to your background image */
+    background-size: cover; /* Ensure the image covers the entire header */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding: 130px; /* Add some padding to the header */
+}
+
+/* Style for the h1 tag */
+h1 {
+    margin: 0;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 5px var(--primary-color2); 
+    color: white; 
+    font-weight: bolder;
+    padding: 15px;
+    padding-left: 30px;
+    background-color: var(--primary-color5);
+    position: relative; 
+    left: 0px; /* Align to the left of the page */
+    top: 120px; /* Align to the top of the page after nav */
+    width: auto;
+    border-radius: 5%;
+    border-style: outset;
+}
+
+/* Style for the nav tag */
+nav {
+    background: linear-gradient(to left, var(--primary-color6), var(--primary-color7));
+    display: flex;
+    width: 100%;
+    text-align: left;
+    text-decoration-color: white;
+    text-shadow: 2px 2px 5px var(--primary-color4); 
+    left: 0px;
+    position: fixed; /* Ensure the nav stays in place */ 
+    left: 7px; /* Align to the left of the page */
+    top: 8px; /* Align to the top of the page */
+    width: 100%; /* Set the width of the nav */ 
+    height: 110px; /* Set the height cover all the li */
+    z-index: 1000; /* any high value to ensure it stays on top */
+
+}
+
+/* Style for the nav links */ 
+nav a { 
+    font-size: 20px; /* Make the text bigger */ 
+    font-weight: bold; /* Make the text bold */ 
+    color: white; 
+    text-decoration: none;
+} 
+
+/* Add hover effect for nav links */ 
+nav a:hover { 
+    color: #ffa700; /* Change text color on hover */ 
+}
+
+nav a:active{
+    background-color: #feddcb;
+}
+
+/* Style for the li tag */
+li {
+    display: grid;
+    line-height: 1.4;
+}
+
+/* Style for the p tag */
+p {
+    line-height: 1.5;
+}
+
+/* Style for the main tag */
+main {
+    background-color: #cfeae4;
+    background-color: var(--primary-color3);
+    font-size: 17px;
+    padding: 20px; /* Add padding if needed */
+}
+
+/* Style for the body tag */
+body {
+    font-family: -apple-system, -apple-system-body, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: var(--primary-color3);
+}
+
+.grid-container { 
+    display: grid; 
+    grid-template-columns: 40% 40%; /* Two columns, each 40% wide */ 
+    justify-content: space-evenly;
+    row-gap: 40px;
+    align-items: start;
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.grid-item { 
+    position: relative; 
+    width: 100%;
+    height: auto; /* Adjust the width 200px*/ 
+}
+
+.grid-item img { 
+    width: 100%;
+    height: auto; 
+    border-radius: 10%;
+    padding: 4px;
+    justify-content: space-evenly;
+    border: 2px dashed var(--primary-color7);
+}
+
+.grid-item .overlay { 
+    position: absolute; 
+    bottom: 0; 
+    left: -10px; 
+    width: 100%; 
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */ 
+    color: white; 
+    padding: 15px; 
+    text-align: center; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+} 
+
+.grid-item:hover img { 
+    transform: scale(1.2); /* Make the image pop up */ 
+    border: none;
+    border-radius: 0%;
+
+} 
+
+.grid-item:hover .overlay { 
+    opacity: 1; /* Show the text on hover */ 
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow the items to wrap onto multiple lines */
+    justify-content: space-evenly; 
+    align-items: start;  
+    padding: 5%;
+    gap: 10px; /* Optional: Add some space between the items */
+    row-gap: 10px;
+    background-color: var(--primary-color3);
+    border: 5px double var(--primary-color1);
+    background-image: url("images/tropical-art.jpg"); /* Path to your background image */
+    background-position: center; /* Center the image */
+    background-repeat: repeat; /* Prevent the image from repeating */
+    opacity: 0.9;   
+}
+
+.flex-item { 
+    position: relative; 
+    width: 370px; /* Adjust the width 200px*/ 
+    height: auto; /* Adjust the height 200px*/ 
+    overflow: hidden; 
+    justify-content: center;
+    border-style: groove;
+}
+
+.flex-item:nth-child(odd) { 
+    border: 5px solid var(--primary-color3);
+}
+
+.flex-item:nth-child(even) { 
+    border: 5px solid var(--primary-color6);
+}
+
+.flex-item img { 
+    width: 350px;
+    height: auto; 
+    border-radius: 15px;
+    opacity: 1;
+    filter: brightness(1);
+    padding: 10px;
+    justify-content: center;
+    /*border: 2px dashed var(--primary-color5); //border around image will be at item level to apply nth child */
+}
+
+.flex-item:hover img { 
+    transform: scale(1.6); /* Make the image pop up */ 
+} 
+
+.flex-item .overlay { 
+    position: absolute; 
+    bottom: 0; 
+    left: -10px; 
+    width: 100%; 
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */ 
+    color: white; 
+    text-align: center; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+} 
+
+.flex-item:hover .overlay { 
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    opacity: 1; /* Show the text on hover */ 
+}
+
+/* Style for the footer tag */
+footer {
+    background-color: var(--primary-color3);
+    clear: both; /* Ensures footer is cleared from floating elements */ 
+    width: 100%; 
+    position: relative; 
+    margin-top: 30px; /* Add some margin to give space between images and footer */ 
+    padding-left: 20px;
+}
+
+/* Style for the embedded YT videos; Apply nth Child */
+.video-container { 
+    display: flex; /* Use flexbox for side-by-side layout */ 
+    justify-content: space-between; /* Space out the videos */ 
+    flex-wrap: wrap; /* Allow wrapping if the screen is too small */ 
+} 
+
+.video-container iframe { 
+    flex: 1; /* Allow each video to take up equal space */ 
+    margin: 5px; /* Add some margin between videos */ 
+    max-width: 100%; /* Ensure videos don't overflow */
+    padding: 4px;
+    border-radius: 2%;
+}
+
+.video-container iframe:nth-child(odd) {
+    border: 3px solid var(--primary-color5);
+}
+
+
+.video-container iframe:nth-child(even) {
+    border: 3px solid var(--primary-color7);
+}
+
